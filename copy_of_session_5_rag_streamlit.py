@@ -33,8 +33,6 @@ from langchain_community.vectorstores import Chroma
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
-
-
 import streamlit as st
 st.set_page_config(
     page_title="RAG Chatbot with Gemini",

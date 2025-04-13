@@ -25,7 +25,7 @@ pip install google-generativeai pdfplumber -q
 
 pip install streamlit
 
-pip install pyngrok
+
 
 import os
 import pdfplumber

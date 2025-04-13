@@ -33,10 +33,14 @@ from langchain_community.vectorstores import Chroma
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
-GEMINI_API_KEY = "AIzaSyAGG224zbeOXQC6VNslRnKpQ4smm-yuUPU"
-os.environ["GOOGLE_API_KEY"] = userdata.get("GEMINI_API_KEY")
+
 
 import streamlit as st
+st.set_page_config(
+    page_title="RAG Chatbot with Gemini",
+    page_icon="📚",
+    layout="wide"
+)
 import os
 import tempfile
 from session_4_rag_backend import (
@@ -52,11 +56,7 @@ from session_4_rag_backend import (
 )
 
 # Page configuration
-st.set_page_config(
-    page_title="RAG Chatbot with Gemini",
-    page_icon="📚",
-    layout="wide"
-)
+
 
 # Session state initialization
 if "conversation" not in st.session_state:

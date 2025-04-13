@@ -33,13 +33,6 @@ from langchain_community.vectorstores import Chroma
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
-import streamlit as st
-st.set_page_config(
-    page_title="RAG Chatbot with Gemini",
-    page_icon="📚",
-    layout="wide"
-)
-import os
 import tempfile
 from session_4_rag_backend import (
     setup_api_key,
@@ -52,7 +45,12 @@ from session_4_rag_backend import (
     get_context_from_chunks,
     query_with_full_context
 )
-
+import streamlit as st
+st.set_page_config(
+    page_title="RAG Chatbot with Gemini",
+    page_icon="📚",
+    layout="wide"
+)
 # Page configuration
 
 

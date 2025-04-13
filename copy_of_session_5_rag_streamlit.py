@@ -72,7 +72,7 @@ def main():
         st.subheader("Configuration")
 
         # API Key input
-        api_key = st.text_input("Enter Gemini API Key:", type="password")
+        api_key = st.secrets["GEMINI_API_KEY"]
 
         if api_key:
             if st.button("Set API Key"):
@@ -204,7 +204,7 @@ def process_documents(uploaded_files):
             vectorstore = store_embeddings(
                 st.session_state.embedding_model,
                 texts,
-                persist_directory="./streamlit_chroma_db"
+                persist_directory=tempfile.mkdtemp()
             )
 
             if vectorstore:
